@@ -40,11 +40,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo Items" id="Nrg-4R-YH0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="odh-Ko-STm">
-                            <connections>
-                                <action selector="pushAddAction:" destination="Rlw-SG-d6T" id="HU3-en-8J9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="odh-Ko-STm">
+                                <connections>
+                                    <action selector="pushAddAction:" destination="Rlw-SG-d6T" id="HU3-en-8J9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="G68-73-clK">
+                                <connections>
+                                    <action selector="pushEditAction:" destination="Rlw-SG-d6T" id="d4b-y4-hvl"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIS-GX-ieO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
