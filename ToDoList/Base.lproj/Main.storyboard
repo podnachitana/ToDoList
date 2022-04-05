@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ToDo Items-->
+        <!--ToDo -->
         <scene sceneID="18L-2a-lM6">
             <objects>
                 <tableViewController id="Rlw-SG-d6T" customClass="TableViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NFg-fd-yCL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NFg-fd-yCL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,7 +26,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z00-Kv-Bcg">
                                             <rect key="frame" x="79" y="0.0" width="315" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -43,14 +43,16 @@
                             <outlet property="delegate" destination="Rlw-SG-d6T" id="kmI-IQ-uuY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDo Items" id="Nrg-4R-YH0">
+                    <navigationItem key="navigationItem" title="ToDo " id="Nrg-4R-YH0">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="odh-Ko-STm">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="pushAddAction:" destination="Rlw-SG-d6T" id="HU3-en-8J9"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="G68-73-clK">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="pushEditAction:" destination="Rlw-SG-d6T" id="d4b-y4-hvl"/>
                                 </connections>

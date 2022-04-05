@@ -17,14 +17,18 @@ class TableViewController: UITableViewController {
 		alertController.addTextField { textField in
 			textField.placeholder = "..."
 		}
+		
 		let alertAction1 = UIAlertAction(title: "Cancel", style: .default) { alert in
 		
 		}
 		
 		let alertAction2 = UIAlertAction(title: "Create", style: .cancel) { alert in
 			let newItem = alertController.textFields![0].text
-			addItem(nameItem: newItem!)
-			self.tableView.reloadData()
+			
+			if newItem != "" {
+				addItem(nameItem: newItem!)
+				self.tableView.reloadData()
+			}
 		}
 		
 		alertController.addAction(alertAction1)
