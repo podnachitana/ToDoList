@@ -8,7 +8,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+	
 	@IBAction func pushEditAction(_ sender: Any) {
 		tableView.setEditing(!tableView.isEditing, animated: true)
 	}
@@ -63,9 +63,10 @@ class TableViewController: UITableViewController {
 		cell.textLabel?.text = currentItem["Name"] as? String
 		
 		if (currentItem["isCompleted"] as? Bool) == true {
-			cell.accessoryType = .checkmark
+			cell.imageView?.image = UIImage(named: "lampOn.png")
+			
 		} else {
-			cell.accessoryType = .none
+			cell.imageView?.image = UIImage(named: "lampOff.png")
 		}
 
         return cell
@@ -96,9 +97,9 @@ class TableViewController: UITableViewController {
 		tableView.deselectRow(at: indexPath, animated: true)
 		
 		if changeState(at: indexPath.row) {
-			tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+			tableView.cellForRow(at: indexPath)?.imageView?.image = UIImage(named: "lampOn.png")
 		} else {
-			tableView.cellForRow(at: indexPath)?.accessoryType = .none
+			tableView.cellForRow(at: indexPath)?.imageView?.image = UIImage(named: "lampOff.png")
 		}
 	}
 
